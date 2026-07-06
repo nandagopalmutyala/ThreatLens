@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block title %}ThreatVision Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- Dashboard Header -->
+
+    <div class="row mb-4">
+
+        <div class="col-lg-8">
+
+            <h2 class="fw-bold text-light">
+                Cyber Threat Intelligence Dashboard
+            </h2>
+
+            <p class="text-secondary">
+                Real-Time AI Powered Threat Monitoring Platform
+            </p>
+
+        </div>
+
+        <div class="col-lg-4 text-end">
+
+            <button class="btn btn-info">
+
+                <i class="bi bi-arrow-clockwise"></i>
+
+                Refresh Feed
+
+            </button>
+
+            <a href="/download-report" class="btn btn-danger">
+
+                <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                    Generate Report
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics Cards -->
+
+    <div class="row g-4">
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card critical">
+
+                <h6>Critical Alerts</h6>
+
+                <h2 style="color:red;">{{ critical_count }}</h2>
+                <p style="color:yellow;">TEST VARIABLE</p>
+
+                <small>● Live Monitoring</small>
+
+            </div>
+ 
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card warning">
+
+                <h6>High Threats</h6>
+
+                <h2>{{ high_count }}</h2>
+
+                <small>● AI Prediction</small>
+
+            </div>
+
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card info">
+
+                <h6>Companies Affected</h6>
+
+                <h2>{{ company_count }}</h2>
+
+                <small>● Organizations</small>
+
+            </div>
+
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stats-card success">
+
+                <h6>CVEs Detected</h6>
+
+                <h2>{{ cve_count }}</h2>
+
+                <small>● Extracted</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Charts -->
+
+    <div class="row mt-4">
+
+        <div class="col-lg-8">
+
+            <div class="chart-card">
+
+                <h5>
+
+                    <i class="bi bi-graph-up"></i>
+
+                    Threat Timeline
+
+                </h5>
+
+                <canvas id="timelineChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="chart-card">
+
+                <h5>
+
+                    <i class="bi bi-pie-chart-fill"></i>
+
+                    Threat Distribution
+
+                </h5>
+
+                <canvas id="threatChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Threat Feed -->
+
+    <div class="row mt-4">
+
+        <div class="col-lg-12">
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <h5>
+
+                        <i class="bi bi-shield-fill-exclamation"></i>
+
+                        Live Threat Feed
+
+                    </h5>
+
+                </div>
+
+                <table class="table table-dark table-hover align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Time</th>
+                            <th>Company</th>
+                            <th>Headline</th>
+                            <th>Threat</th>
+                            <th>Severity</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    {% for item in news_data %}
+
+                    <tr>
+
+                        <td>{{ item.timestamp }}</td>
+
+                        <td>{{ item.company }}</td>
+
+                        <td style="max-width:420px;">
+
+                        {{ item.headline[:80] }}...
+
+                        </td>
+
+                        <td>
+
+                        <span class="badge bg-primary">
+
+                        {{ item.threat }}
+
+                        </span>
+
+                        </td>
+
+                        <td>
+
+                        {% if item.severity=="Critical" %}
+
+                        <span class="badge bg-danger">
+
+                        {% elif item.severity=="High" %}
+
+                        <span class="badge bg-warning text-dark">
+
+                        {% else %}
+
+                        <span class="badge bg-info">
+
+                        {% endif %}
+
+                        {{ item.severity }}
+
+                        </span>
+
+                        </td>
+
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% block scripts %}
+
+<script>
+const threatLabels = {{ threat_labels|tojson }};
+const threatValues = {{ threat_values|tojson }};
+const timelineLabels = {{ timeline_labels|tojson }};
+const timelineValues = {{ timeline_values|tojson }};
+</script>
+
+<script>
+setInterval(function () {
+    window.location.reload();
+}, 60000);
+</script>
+
+{% endblock %}
+{% endblock %}

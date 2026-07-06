@@ -1,0 +1,69 @@
+<nav class="top-navbar">
+
+    <div class="left-section">
+
+        <button class="menu-btn" id="menuToggle">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="page-title">
+
+            <h3>Dashboard</h3>
+
+            <p>AI Powered Cyber Threat Intelligence Platform</p>
+
+        </div>
+
+    </div>
+
+    <div class="right-section">
+
+    <form method="GET" action="/" class="search-box">
+
+        <i class="bi bi-search"></i>
+
+        <input
+    type="text"
+    name="search"
+    class="form-control"
+    placeholder="Search company, threat..."
+    value="{{ request.args.get('search','') }}"
+    onkeydown="if(event.key==='Enter'){this.form.submit();}"
+>
+
+    </form>
+        <button class="icon-btn">
+
+            <i class="bi bi-bell-fill"></i>
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+        <button class="icon-btn">
+
+            <i class="bi bi-file-earmark-arrow-down-fill"></i>
+
+        </button>
+
+        <div class="profile">
+
+            <div class="avatar">
+
+                M
+
+            </div>
+
+            <div class="profile-info">
+
+                <h6>Mutyala Nanda Gopal</h6>
+
+                <span>Administrator</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>

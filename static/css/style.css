@@ -1,0 +1,446 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    background:#0B1220;
+
+    color:#F8FAFC;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    flex:1;
+
+    margin-left:270px;
+
+    transition:.3s;
+
+}
+
+.page-content{
+
+    padding:30px;
+
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:270px;
+
+    height:100vh;
+
+    background:#111827;
+
+    border-right:1px solid rgba(255,255,255,.05);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =========================
+LOGO
+========================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:30px 25px;
+
+}
+
+.logo-icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:15px;
+
+    background:#00D4FF;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+}
+
+.logo-text h2{
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.logo-text span{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+/* =========================
+MENU
+========================= */
+
+.menu{
+
+    list-style:none;
+
+    padding:20px;
+
+}
+
+.menu li{
+
+    margin-bottom:10px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:#16213E;
+
+    color:#00D4FF;
+
+}
+
+.menu li.active a{
+
+    background:#16213E;
+
+    color:#00D4FF;
+
+}
+
+.menu i{
+
+    font-size:20px;
+
+}
+
+/* =========================
+SIDEBAR FOOTER
+========================= */
+
+.sidebar-footer{
+
+    margin-top:auto;
+
+    padding:20px;
+
+}
+
+.status-card{
+
+    background:#16213E;
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.status-card h6{
+
+    margin-bottom:15px;
+
+}
+
+.status-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:10px 0;
+
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:0 0 10px #22C55E;
+
+}
+
+/* =========================
+TOP NAVBAR
+========================= */
+
+.top-navbar{
+
+    height:80px;
+
+    background:#111827;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.left-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.menu-btn{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+.page-title h3{
+
+    margin:0;
+
+}
+
+.page-title p{
+
+    margin:0;
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+/* =========================
+SEARCH
+========================= */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#16213E;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    width:320px;
+
+}
+
+.search-box input{
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    width:100%;
+
+}
+
+.search-box input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* =========================
+RIGHT NAV
+========================= */
+
+.right-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.icon-btn{
+
+    position:relative;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#16213E;
+
+    color:white;
+
+}
+
+.notification-dot{
+
+    position:absolute;
+
+    right:10px;
+
+    top:8px;
+
+    width:8px;
+
+    height:8px;
+
+    background:red;
+
+    border-radius:50%;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#00D4FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.profile-info h6{
+
+    margin:0;
+
+}
+
+.profile-info span{
+
+    font-size:12px;
+
+    color:#94A3B8;
+
+}

@@ -1,0 +1,13 @@
+text,label,severity
+bank credentials stolen phishing attack,Phishing,High
+fake login page steals password,Phishing,Medium
+email scam targets users,Phishing,Medium
+ransomware encrypts company files,Ransomware,Critical
+new ransomware attack spreads globally,Ransomware,Critical
+hackers demand bitcoin ransom,Ransomware,High
+malware infects android devices,Malware,Medium
+trojan malware attacks windows systems,Malware,High
+spyware secretly tracks user activity,Malware,Low
+website flooded with fake traffic,DDoS,High
+server unavailable due to ddos attack,DDoS,Critical
+massive traffic attack shuts service,DDoS,High

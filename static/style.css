@@ -1,0 +1,39 @@
+body {
+    background-color: #0b1220;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.main-title {
+    color: #00d4ff;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #bbbbbb;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    min-height: 280px;
+}
+
+.critical-card {
+    background-color: #7a0000;
+    box-shadow: 0px 0px 15px red;
+}
+
+.high-card {
+    background-color: #7a4b00;
+    box-shadow: 0px 0px 15px orange;
+}
+ 
+.normal-card {
+    background-color: #12385c;
+    box-shadow: 0px 0px 15px #00d4ff;
+}
