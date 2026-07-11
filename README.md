@@ -87,20 +87,37 @@ ThreatLens/
 
 ---
 
-## Dashboard
+## 📷 Dashboard Preview
 
-The dashboard provides:
+### Main Dashboard
 
-- Live Threat Feed
-- Threat Distribution Chart
-- Threat Timeline
-- Critical Alerts
-- High Severity Threats
-- Company Detection
-- CVE Detection
-- Search
-- PDF Export
+<p align="center">
+  <img src="static/images/dashboard.png" width="100%">
+</p>
 
+---
+
+### Threat Timeline
+
+<p align="center">
+  <img src="static/images/timeline.png" width="80%">
+</p>
+
+---
+
+### Threat Distribution
+
+<p align="center">
+  <img src="static/images/distribution.png" width="45%">
+</p>
+
+---
+
+### Generated PDF Report
+
+<p align="center">
+  <img src="static/images/report.png" width="80%">
+</p>
 ---
 
 ## REST APIs
