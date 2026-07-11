@@ -178,6 +178,14 @@ https://www.linkedin.com/in/nanda-gopal-mutyala-3875663b4
 
 ---
 
+## System Architecture
+
+The following diagram illustrates the end-to-end workflow of ThreatLens, from collecting cybersecurity news to generating actionable insights through machine learning, NLP, and an interactive dashboard.
+
+<p align="center">
+  <img src="static/images/architecture.png" alt="ThreatLens System Architecture" width="100%">
+</p>
+
 ## License
 
 This project is intended for educational and learning purposes.
